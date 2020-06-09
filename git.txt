@@ -1,0 +1,173 @@
+Git: - Source control (code) Management
+
+To store all your codes in a centralized platform
+
+Companies provide git access:
+
+github.com, gitlab.com, aws, azure, gcp
+
+
+----------------------------------------------------
+
+Earlier for controlling the source they use SCM
+
+SCM is one kind of source control platform.
+
+
+Git is the current trend for source code/ source control
+
+
+----------------------------------------------------
+
+
+Predomnant everyone in industry uses Github(Microsoft recently purchased)
+
+----------------------------------------------------
+
+
+10 members in a company
+
+(Every one works in their personal computer)
+
+Database Developers and their work shift:
+
+Ashif --- 9 - 5 
+Rizwan --- 5 - 12
+Ashika ---- 12 -- 9
+
+Centralized database - MySQL database -- its a tool
+
+Family company:
+
+Database -> Family
+
+Tables:
+
+Customer
+Supplier
+Orderdetails
+Products
+
+Front end developers requesting 20 sql statements:
+
+Ashif --- 10 SQL statements --- save --- local computer
+
+Rizwan --- 10 sql statements --- save -- local laptop
+
+Ashika --- 10 sql statements --- save --- local laptop
+
+
+Github --- centralized storage space for storing only codes(Java, Python, SQL)
+
+
+Repository -- family
+
+Set only public
+
+Create repo
+
+
+
+Create new file:
+
+-------------------------------------------------------------------------------------
+
+
+Repository -- It is nothing but a folder
+
+Branch -- kind of subfolders
+
+commit -- any changes made in the repository specific to branches
+
+New Pull Request - to merge files from one branch to another branch
+
+Clone -- a copy of repository in local(Do not download)
+
+----------------------------------------------------------------
+
+Git commands:
+
+Go to Powershell to execute the below commands:
+
+cd .. - to go back previous folder
+
+cd (folder name) -- to move to the specific folder
+
+ls - to list all the folders and files inside a folder
+
+-----------------------------------------------------------
+
+To clone the repository to the local computer:
+
+git clone https://github.com/syedsumx/family.git
+
+
+
+Navigate the the cloned folder -- using cd (foldername)
+
+
+Make any changes to the files inside the family folder
+
+then save it 
+
+
+
+adding the file saved through git
+
+
+git add --all
+
+
+commiting changes in the local git
+
+
+git commit -m 'message to be specified'
+
+
+To push the committed changes to the github
+
+git push
+
+It might ask you to login for the first time
+
+
+Then you can see the changes in the github respect to the branch
+
+
+
+--------------------------------------------------
+
+
+to view the list of branches inside the repository:
+
+git branch -a
+
+
+It lists all the branches and highlights the current branch using a *
+
+
+
+To cahnge to the specific branch
+
+
+git checkout ashif
+
+
+------------------------------------------------------------
+
+
+git pull
+
+
+To pull the latest changes made in the branch
+
+
+
+------------------------------------------------------------
+
+
+
+
+
+
+

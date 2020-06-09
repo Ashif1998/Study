@@ -1,0 +1,603 @@
+
+SDLC:
+
+1 - waterfall
+2 - Agile
+
+Agile:
+
+Benifits:
+
+1. Fast -- all employees work together (sd, Test, Req)
+2. Customers happy
+3. Feature release ( Main Product -- Instagram) --- photo sharing --- photo, message, story, calls, video calls
+4. rework eliminate --- waterfall 10 months -- if you dont like product -- rework completely ... 
+
+
+Scrum - Tool/Process - Scrum board
+
+1. Scrum Master - super visor -- overview the project tracking
+2. Product owner -- customer requirement gather and deliver the requirements to the developers
+3. Developers - SD, CE, Testing, Architect
+
+Scrum -- 2 to 4 weeks --- (sprint) - - depends on the company
+
+Scrum board for each team
+
+Backlog -- set of work/Stories
+
+Story --- main work
+
+Task --- sub division of story
+
+-------------------------------------------------------------------------
+
+C program - interview 
+
+Edge --- SDLC, SQL, Cloud computing
+
+Interviewer
+
+Fresher/ Intern --- JAVA --- other IT skills
+
+IT skills, Communication(Culture) --- programming skills
+
+-----------------------------------------------------------------------
+
+
+
+SQL: Strucuture Query Language
+
+Demi GOD of IT
+
+
+Marketing
+Sales
+Presale
+Architect
+
+Current Industry every one needs to know SQL (MBA, MS)
+
+
+SQL is primary language to talk with data
+
+Data --- SQL
+
+
+Data add in a table, data delete, change/update, Data analyse --- can be done using SQL
+
+
+-------------------------------------------------------------------------------------------------
+
+https://www.w3schools.com/
+
+Table:
+
+Data will store as a table (IT world)
+
+
+Instagram account create 
+
+username
+password
+country
+Actual name
+
+100 table --- Database
+
+Table - Account
+
+--------------------------------------------------
+CustomerName | password |
+--------------------------------------------------
+1. Alfred
+
+Primary Key  --- 
+
+Foreign key
+
+
+basic english
+
+SQL Commands:
+
+SELECT --- Collects the information from the table
+
+* - Overall information from a table
+
+select * from (table name) ;
+
+select (column name) from (table name) ;
+
+select * from (table name) where (colum name = ? );
+
+select * from customers where customerid = 5;
+
+
+--------------------------------------------------
+
+{ select | where }
+
+AND | OR  | NOT --- where condition
+
+select * from Customers where Country = 'Germany' AND City='Berlin';
+
+select * from Customers where Country/City = 'Germany' OR Country/City ='Mexico';
+
+select * from Customers where NOT Country = 'Germany';
+
+
+--------------------------------------------------
+ORDER BY
+
+SELECT * FROM Customers where Country= 'Argentina' OR Country= 'Germany'
+ORDER BY Country;
+
+SELECT * FROM Customers where Country= 'Argentina' OR Country= 'Germany'
+ORDER BY CustomerID desc;
+
+SELECT * FROM Customers where Country= 'Argentina' OR Country= 'Germany'
+ORDER BY CustomerID asc;
+
+By default ORDER BY will result in Ascending format
+
+--------------------------------------------------
+
+INSERT INTO 
+
+two ways of inserting happens :
+
+1) INSERT INTO table_name (column1, column2, column3, ...)
+   VALUES (value1, value2, value3, ...);
+
+2) INSERT INTO table_name 
+   VALUES (value1, value2, value3, ...);   {here in values we must mention datas as many as there in as columns}
+
+--------------------------------------------------
+
+Find Null value and not null value
+
+Null :
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+
+NOT NULL :
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+
+--------------------------------------------------
+UPDATE THE EXISTING DATAS
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+example :
+
+Single UPDATE 
+
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+
+Multiple update :
+
+UPDATE Customers
+SET ContactName='Juan'
+WHERE Country='Mexico';
+
+
+--------------------------------------------------
+ 
+DELETE DATA FROM TABLE :
+
+DELETE FROM table_name WHERE condition;
+
+example :
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+Delete entire data:
+
+DELETE FROM table_name;
+
+
+--------------------------------------------------
+
+
+Day 3:
+
+
+Database Providers --- Oracle (Oracle DB), Microsoft (MS SQL Server), Open source vendor - MySQL
+
+-----------------------------------------
+
+Select Top: MySQL
+
+
+SELECT * FROM Customers LIMIT 50; - Retrieves top 50 rows
+
+-------------------------------------------------------------
+
+Min and Max:
+
+
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+
+
+-------------------------------------------------------------------
+
+COUNT, AVG, SUM:
+
+
+COUNT:
+
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+
+SELECT COUNT(ProductID)
+FROM Products
+where SupplierID=1;
+
+
+SUM:
+
+
+SELECT SUM(column_name)
+FROM Products;
+
+SELECT SUM(Price)
+FROM Products
+where SupplierID=1;
+
+
+AVG:
+
+
+SELECT AVG(column_name)
+FROM Products;
+
+SELECT AVG(Price)
+FROM Products
+where SupplierID=1;
+
+
+---------------------------------------------------
+
+
+LIKE:
+
+% -- It denotes either null value or any value
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+
+---------------------------------------------------------
+
+
+WILD CARDS:
+
+% -- It denotes either null value or any value
+_ --- Any value but only one value
+
+SELECT * FROM Customers
+WHERE City LIKE '_ondon';
+
+SELECT * FROM Customers
+WHERE City LIKE 'l%';
+
+Above two sql statements result the same answer
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+
+
+SELECT * FROM Customers
+WHERE City LIKE '[a-e]%';
+
+
+-------------------------------------
+SELECT * FROM Customers
+WHERE City NOT LIKE '[bsp]%';
+
+SELECT * FROM Customers
+WHERE City  LIKE '[!bsp]%';
+
+Above two statements result the same value where it avoids city starting with bsp
+
+
+--------------------------------------------------------------------------------
+
+
+BETWEEN:
+
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20;
+
+-------------------------------------------
+
+ALIAS:
+
+
+SELECT column_name AS alias_name
+FROM table_name;
+
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+
+
+---------------------------------------------------------------
+
+
+GROUP BY:
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+
+
+----------------------------------------------------
+
+
+DAY 4:
+
+
+SQL:
+
+
+SQL IN:
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT);
+
+
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
+
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+
+
+
+-----------------------------------------------------------------------------------
+
+
+Joins:
+
+
+
+
+Customer
+
+name customerid productid  			
+
+
+Supplier
+
+Suppliername      supplierid              productid
+
+
+			
+Product
+
+peoductname   productid        supplierid         customerid
+
+
+
+
+INNER JOIN:
+
+
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers
+ON Orders.CustomerID=Customers.CustomerID;
+
+
+
+
+Employees LEFT JOIN Orders
+
+
+Orders RIGHT JOIN Employees
+
+
+
+
+Employees --- PK - employee id
+
+orders  ---- PK - -- order id
+	   FK - employee id
+
+
+
+LEFT JOIN:
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+
+RIGHT JOIN:
+
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+
+
+FULL OUTER JOIN:
+
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+
+
+----------------------------------------------------------------------
+
+UNION:
+
+Results only common values in both the tables
+
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+
+Results all the values in both the tables
+
+SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers
+ORDER BY City;
+
+
+----------------------------------------------------------------------
+
+GROUP BY:
+
+
+SELECT Customers.CustomerName, count(Orders.OrderID) as Orders
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID
+GROUP BY Customers.CustomerName;
+
+
+SELECT Shippers.ShipperName,COUNT(Orders.OrderID) AS NumberOfOrders 
+FROM 
+Orders LEFT JOIN Shippers 
+ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName;
+
+
+SELECT COUNT(CustomerID) as customers, Country
+FROM Customers
+GROUP BY Country
+ORDER BY customers DESC;
+
+----------------------------------------------------------------------
+
+
+HAVING:
+
+SELECT COUNT(CustomerID) as customers, Country
+FROM Customers
+GROUP BY Country
+HAVING customers > 5
+ORDER BY customers;
+
+
+----------------------------------------------------------------------
+
+SELECT INTO:
+
+Creates a new table and adds the columns
+
+customer:
+
+customer id address
+
+select id, address into customer address
+from customer;
+
+
+customer address:
+
+id address
+
+
+----------------------------------------------------------------------
+
+SQL EXISTS:
+
+
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
+
+
+SELECT SupplierName
+FROM Suppliers
+WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price < 20);
+
+
+----------------------------------------------------------------------
+
+
+INSERT INTO SELECT:
+
+
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition;
+
+
+INSERT INTO Customers (CustomerName, City, Country)
+SELECT SupplierName, City, Country FROM Suppliers;
+
+
+----------------------------------------------------------------------
+
+
+IF THEN ELSE | CASE WHEN ELSE:
+
+
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+
+
+SELECT OrderID, Quantity,
+CASE WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+WHEN Quantity = 30 THEN 'The quantity is 30'
+ELSE 'The quantity is under 30' END 
+AS quantitytext
+FROM OrderDetails;
+
+
+----------------------------------------------------------------------
+
+Null Functions:
+
+SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
+FROM Products;
+
+
+
